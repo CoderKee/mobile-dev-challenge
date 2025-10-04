@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_dev_challenge/_generated_prisma_client/client.dart';
 import 'package:mobile_dev_challenge/db.dart';
+import 'package:mobile_dev_challenge/productscreen.dart';
 
 late final PrismaClient prisma;
 
@@ -57,9 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Text(style: TextStyle(fontSize: 30), 'Display products here'),
-      ),
+      body: ProductsScreen(),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
